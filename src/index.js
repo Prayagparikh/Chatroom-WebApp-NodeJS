@@ -6,6 +6,7 @@ const socketio = require('socket.io');
 const Filter = require('bad-words');
 const {generateMessage, generateLocationMessage} = require('./utils/messages')
 const {addUser, removeUser, getUser, getUsersInRoom} = require('./utils/users')
+const port = process.env.port || 3000
 
 const publicDirPath = path.join(__dirname, '../public');
 
@@ -77,7 +78,7 @@ io.on('connection', (socket) => {
     })
 })
 
-server.listen(3000, () => {                     //server. instead of app.
+server.listen(port, () => {                     //server. instead of app.
     console.log('Server is ready on port 3000!');
 })
 
