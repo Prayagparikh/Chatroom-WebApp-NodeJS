@@ -6,7 +6,7 @@ const socketio = require('socket.io');
 const Filter = require('bad-words');
 const {generateMessage, generateLocationMessage} = require('./utils/messages')
 const {addUser, removeUser, getUser, getUsersInRoom} = require('./utils/users')
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 
 const publicDirPath = path.join(__dirname, '../public');
 
